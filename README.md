@@ -1,5 +1,14 @@
 # NgWorkspaceTest
 
+
+- `ng new ng-workspace-test --create-application=false`
+- `ng g application test-app1 --project-root=projects/apps/test-app1 --prefix=app`
+- `ng g application test-app2 --project-root=projects/apps/test-app2 --prefix=app`
+- `ng g library lib1 --project-root=projects/libs/lib1 --prefix=lib`
+- `ng g library lib2 --project-root=projects/libs/lib2 --prefix=lib`
+- `ng g library lib3 --project-root=projects/libs/lib3 --prefix=lib`
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.4.
 
 ## Development server

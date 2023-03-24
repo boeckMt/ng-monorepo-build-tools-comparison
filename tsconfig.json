@@ -9,6 +9,17 @@
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
+    "paths": {
+      "lib1": [
+        "dist/lib1"
+      ],
+      "lib2": [
+        "dist/lib2"
+      ],
+      "lib3": [
+        "dist/lib3"
+      ]
+    },
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
     "declaration": false,
