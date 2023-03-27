@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Lib2Component } from './lib2.component';
-
+import { CommonModule } from '@angular/common';
 
 
 @NgModule({
@@ -8,6 +8,7 @@ import { Lib2Component } from './lib2.component';
     Lib2Component
   ],
   imports: [
+    CommonModule
   ],
   exports: [
     Lib2Component
