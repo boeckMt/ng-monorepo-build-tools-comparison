@@ -1,6 +1,7 @@
 {
-  "name": "lib3",
+  "name": "@libs/lib3",
   "version": "0.0.1",
+  "main": "src/public-api",
   "peerDependencies": {
     "@angular/common": "^15.2.0",
     "@angular/core": "^15.2.0"
