@@ -9,6 +9,13 @@
     "build": "ng build",
     "test": "ng test --watch false"
   },
+  "workspaces": [
+    "projects\\apps\\test-app1",
+    "projects\\apps\\test-app2",
+    "projects\\libs\\lib1",
+    "projects\\libs\\lib2",
+    "projects\\libs\\lib3"
+  ],
   "private": true,
   "dependencies": {
     "@angular/animations": "^15.2.0",

@@ -1,0 +1,12 @@
+{
+    "name": "test-app2",
+    "version": "1.0.0",
+    "description": "",
+    "main": "src/app/main.ts",
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {},
+    "dependencies": {
+        "@libs/lib3": "*"
+    }
+}
