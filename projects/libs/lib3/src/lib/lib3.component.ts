@@ -6,7 +6,7 @@ import { Lib1Service } from '@libs/lib1';
   selector: 'lib-lib3',
   template: `
     <p>
-      lib2: color {{color | json }} from lib1
+      lib3: color {{color | json }} from lib1
     </p>
   `,
   styles: [
