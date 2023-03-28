@@ -8,5 +8,28 @@
     "devDependencies": {},
     "dependencies": {
         "@libs/lib3": "*"
+    },
+    "scripts": {
+        "build": "wireit",
+        "test": "wireit"
+    },
+    "wireit": {
+        "build": {
+            "command": "ng build --configuration production",
+            "dependencies": [
+                "../../libs/lib3:build"
+            ],
+            "files": [
+                "src/**"
+            ],
+            "output": []
+        },
+        "test": {
+            "command": "ng test --watch false",
+            "files": [
+                "src/**"
+            ],
+            "output": []
+        }
     }
 }

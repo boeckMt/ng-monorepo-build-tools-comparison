@@ -9,5 +9,25 @@
   "dependencies": {
     "tslib": "^2.3.0"
   },
-  "sideEffects": false
+  "sideEffects": false,
+  "scripts": {
+    "build": "wireit",
+    "test": "wireit"
+  },
+  "wireit": {
+    "build": {
+      "command": "ng build --configuration production",
+      "files": [
+        "src/**"
+      ],
+      "output": []
+    },
+    "test": {
+      "command": "ng test --watch false",
+      "files": [
+        "src/**"
+      ],
+      "output": []
+    }
+  }
 }
