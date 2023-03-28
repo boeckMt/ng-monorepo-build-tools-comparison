@@ -6,8 +6,8 @@
     "start": "npm run serve:1",
     "serve:1": "ng serve test-app1",
     "serve:2": "ng serve test-app1",
-    "build": "npm run build --workspaces",
-    "test": "npm run test --workspaces"
+    "build": "ng build lib1 && ng build lib2 && ng build lib3 && ng build test-app1 && ng build test-app2",
+    "test": "ng test --watch false"
   },
   "workspaces": [
     "projects\\apps\\test-app1",
