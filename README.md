@@ -63,6 +63,22 @@ use projects/libs/**/tsconfig.lib.prod.json to override the path's
 }
 ```
 
+### Add [wireit](https://github.com/google/wireit) for npm scripts
+
+`npm i -D wireit`
+
+- add build and test scripts for packages and [configure wireit](https://github.com/google/wireit#cross-package-dependencies)
+- run build and test from main package with workspace scripts
+```
+npm run build --workspaces
+npm run test --workspaces
+```
+
+If some things should get regenerated but wireit is using the cache, [disable (local) caching](https://github.com/google/wireit#local-caching) (e.g. if dist folder was removed to generate new output)
+`WIREIT_CACHE=none npm run build --workspace=test-app1`
+
+---
+
 
 
 ### Other Resources
