@@ -64,6 +64,20 @@ use projects/libs/**/tsconfig.lib.prod.json to override the path's
 ```
 
 
+### Add [Turborepo](https://turbo.build/repo/docs/getting-started/existing-monorepo) as build system
+
+`npm install turbo --global` or `npm install turbo -D`
+
+- [add Turborepo to your existing monorepo](https://turbo.build/repo/docs/getting-started/existing-monorepo)
+- run build and test [tasks](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks) from main package
+- turbo can also [filter](https://turbo.build/repo/docs/core-concepts/monorepos/filtering) this tasks.
+```
+"build:apps": "npx turbo run ng:build --filter=...{./projects/apps/*}",
+"build:libs": "npx turbo run ng:build --filter=./projects/libs/*",
+"test:apps": "npx turbo run ng:test --filter=./projects/apps/*",
+"test:libs": "npx turbo run ng:test --filter=./projects/libs/*"
+```
+
 
 ### Other Resources
 

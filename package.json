@@ -6,8 +6,10 @@
     "start": "npm run serve:1",
     "serve:1": "ng serve test-app1",
     "serve:2": "ng serve test-app1",
-    "build": "npm run build --workspaces",
-    "test": "npm run test --workspaces"
+    "build:apps": "npx turbo run ng:build --filter=...{./projects/apps/*}",
+    "build:libs": "npx turbo run ng:build --filter=./projects/libs/*",
+    "test:apps": "npx turbo run ng:test --filter=./projects/apps/*",
+    "test:libs": "npx turbo run ng:test --filter=./projects/libs/*"
   },
   "workspaces": [
     "projects\\apps\\test-app1",
@@ -42,6 +44,7 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.0.0",
     "ng-packagr": "^15.2.2",
+    "turbo": "^1.8.6",
     "typescript": "~4.9.4",
     "wireit": "^0.9.5"
   }
