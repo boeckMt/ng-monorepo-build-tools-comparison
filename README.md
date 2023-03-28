@@ -8,6 +8,82 @@
 - `ng g library lib2 --project-root=projects/libs/lib2 --prefix=lib`
 - `ng g library lib3 --project-root=projects/libs/lib3 --prefix=lib`
 
+---
+
+Creating Libraries
+- https://angular.io/guide/creating-libraries
+
+---
+Enterprise Angular Monorepo Patterns:
+- https://docs.google.com/presentation/d/1onEJciG3Yxb5PoOxl9ZyYCcdc-FykPEoDl4utx4k7WU/edit#slide=id.ga667a598fe_0_0
+
+- https://kgotgit.medium.com/monorepo-pattern-setting-up-angular-workspace-for-multiple-applications-in-one-single-repository-4e14bc0d0cc0
+
+
+Is there a better way to build an Angular monorepo app with libraries:
+- https://stackoverflow.com/questions/57170936/is-there-a-better-way-to-build-an-angular-monorepo-app-with-libraries
+
+
+This is not something that we'd looking to support. Ng-packagr is a build tool and not an orchestrator.
+The Angular CLI has a feature request for this: angular/angular-cli#11002, also you can use gulp, nx or Bazel as your orchestrators to build in topological order.
+- https://github.com/ng-packagr/ng-packagr/issues/1264
+
+
+Add flag for running NPM commands in transitive dependencies:
+- https://github.com/npm/rfcs/issues/548
+---
+
+
+To get TypeScript import libs in development mode (ng serve or ng test) set paths to the source files in the main tsconfig.
+Unfortunately, this cannot be used to build libraries. 
+- https://github.com/ng-packagr/ng-packagr/issues/1264
+- https://github.com/angular/angular-cli/issues/19831
+- https://github.com/angular/angular-cli/issues/11002#issuecomment-846391752
+
+
+
+To build them we have to reference the dist folder and pre built each lib in the correct order!!!
+use projects/libs/**/tsconfig.lib.prod.json to override the path's
+
+```json
+main tsconfig
+{
+  ...
+  "compilerOptions": {
+    ...
+    "paths": {
+      "@libs/*": [
+        "projects/libs/*",
+      ]
+    },
+    ...
+  },
+  ...
+}
+```
+
+```json
+tsconfig.lib.prod.json
+{
+  ...
+  "compilerOptions": {
+    ...
+    "paths": {
+      "@libs/*": [
+        "dist/*"
+      ]
+    }
+  },
+  ...
+}
+```
+
+
+
+
+
+
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.4.
 
