@@ -7,7 +7,7 @@
     "serve:1": "ng serve test-app1",
     "serve:2": "ng serve test-app1",
     "build": "npm run build --workspaces",
-    "test": "ng test --watch false"
+    "test": "npm run test --workspaces"
   },
   "workspaces": [
     "projects\\apps\\test-app1",
