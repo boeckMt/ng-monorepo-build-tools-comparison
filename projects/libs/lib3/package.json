@@ -10,5 +10,11 @@
     "tslib": "^2.3.0",
     "@libs/lib1": "*"
   },
-  "sideEffects": false
+  "sideEffects": false,
+  "scripts": {
+    "ng:build": "ng build lib2 --configuration production",
+    "build": "npx turbo run ng:build",
+    "ng:test": "ng test lib2 --watch false",
+    "test": "npx turbo run ng:test"
+  }
 }

@@ -8,5 +8,11 @@
     "devDependencies": {},
     "dependencies": {
         "@libs/lib2": "*"
+    },
+    "scripts": {
+        "ng:build": "ng build test-app1 --configuration production",
+        "build": "npx turbo run ng:build",
+        "ng:test": "ng test test-app1 --watch false",
+        "test": "npx turbo run ng:test"
     }
 }
