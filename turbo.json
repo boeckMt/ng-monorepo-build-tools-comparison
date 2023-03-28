@@ -1,0 +1,19 @@
+{
+    "$schema": "https://turbo.build/schema.json",
+    "pipeline": {
+        "ng:build": {
+            "dependsOn": [
+                "^ng:build"
+            ],
+            "outputs": [
+                ".dist/**"
+            ]
+        },
+        "ng:test": {
+            "inputs": [
+                "src/**/*.ts",
+                "test/**/*.ts"
+            ]
+        }
+    }
+}
