@@ -16,14 +16,14 @@
   },
   "wireit": {
     "build": {
-      "command": "ng build --configuration production",
+      "command": "ng build lib1 --configuration production",
       "files": [
         "src/**"
       ],
       "output": []
     },
     "test": {
-      "command": "ng test --watch false",
+      "command": "ng test lib1 --watch false",
       "files": [
         "src/**"
       ],

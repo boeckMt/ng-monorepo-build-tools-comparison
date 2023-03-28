@@ -17,7 +17,7 @@
   },
   "wireit": {
     "build": {
-      "command": "ng build --configuration production",
+      "command": "ng build lib3 --configuration production",
       "dependencies": [
         "../lib1:build"
       ],
@@ -27,7 +27,7 @@
       "output": []
     },
     "test": {
-      "command": "ng test --watch false",
+      "command": "ng test lib3 --watch false",
       "files": [
         "src/**"
       ],
