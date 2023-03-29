@@ -1,5 +1,15 @@
 # NgWorkspaceTest
 
+This is a test monorepo that builds [angular libraries](https://angular.io/guide/libraries) with different tools like [turbo.build](https://turbo.build/repo/docs/getting-started/existing-monorepo), [Nx](https://nx.dev/recipes/adopting-nx/adding-to-monorepo) and [wireit](https://github.com/google/wireit).
+
+There are the following branches to check the differences:
+- [main]() the normal `angular CLI` workspace
+
+and adjustments to build and test apps and libraries
+- [test-turbo](https://github.com/boeckMt/ng-monorepo-build-tools-comparison/tree/test-turbo)
+- [test-wireit](https://github.com/boeckMt/ng-monorepo-build-tools-comparison/tree/test-wireit)
+- [test-nx](https://github.com/boeckMt/ng-monorepo-build-tools-comparison/tree/test-nx)
+
 ### Commands to create this repo
 
 - `ng new ng-workspace-test --create-application=false`
