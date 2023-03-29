@@ -1,0 +1,31 @@
+{
+  "name": "lib3",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "projects/libs/lib3/src",
+  "prefix": "lib",
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:ng-packagr",
+      "options": {
+        "project": "projects/libs/lib3/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "projects/libs/lib3/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "projects/libs/lib3/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "tsConfig": "projects/libs/lib3/tsconfig.spec.json",
+        "polyfills": ["zone.js", "zone.js/testing"]
+      }
+    }
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "name": "test-app1",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "generators": {},
+  "sourceRoot": "projects/apps/test-app1/src",
+  "prefix": "app",
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:browser",
+      "options": {
+        "outputPath": "dist/test-app1",
+        "index": "projects/apps/test-app1/src/index.html",
+        "main": "projects/apps/test-app1/src/main.ts",
+        "polyfills": ["zone.js"],
+        "tsConfig": "projects/apps/test-app1/tsconfig.app.json",
+        "assets": [
+          "projects/apps/test-app1/src/favicon.ico",
+          "projects/apps/test-app1/src/assets"
+        ],
+        "styles": ["projects/apps/test-app1/src/styles.css"],
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "browserTarget": "test-app1:build:production"
+        },
+        "development": {
+          "browserTarget": "test-app1:build:development"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "browserTarget": "test-app1:build"
+      }
+    },
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "polyfills": ["zone.js", "zone.js/testing"],
+        "tsConfig": "projects/apps/test-app1/tsconfig.spec.json",
+        "assets": [
+          "projects/apps/test-app1/src/favicon.ico",
+          "projects/apps/test-app1/src/assets"
+        ],
+        "styles": ["projects/apps/test-app1/src/styles.css"],
+        "scripts": []
+      }
+    }
+  }
+}
