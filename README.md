@@ -64,6 +64,25 @@ use projects/libs/**/tsconfig.lib.prod.json to override the path's
 ```
 
 
+### Add [Nx](https://nx.dev/getting-started/intro)
+
+here [add nx to (Monorepo) NPM Workspace](https://nx.dev/recipes/adopting-nx/adding-to-monorepo) is used instead of [migrating an Angular CLI project to Nx](https://nx.dev/recipes/adopting-nx/migration-angular#migrating-an-angular-cli-project-to-nx) because this does not rebuild the folder structure.
+
+- `npx nx@latest init`
+- change scripts in main package
+```
+"serve:1": "nx serve test-app1",
+"serve:2": "nx serve test-app1",
+"build": "nx run-many --target=build",
+"test": "nx run-many --target=test"
+```
+- [nx run-many](https://nx.dev/packages/nx/documents/run-many)
+
+all scripts must then be run with the prefix `nx` and not with `ng`.
+---
+
+
+
 
 ### Other Resources
 
