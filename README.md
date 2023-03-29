@@ -53,6 +53,7 @@ Unfortunately, this cannot be used to build libraries.
 
 
 - override paths for libs in prod config to build with paths to dist
+
 To build them we have to reference the dist folder and pre built each lib in the correct order!!!
 use projects/libs/**/tsconfig.lib.prod.json to override the path's
 
