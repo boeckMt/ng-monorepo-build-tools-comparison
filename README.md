@@ -77,6 +77,28 @@ npm run test --workspaces
 If some things should get regenerated but wireit is using the cache, [disable (local) caching](https://github.com/google/wireit#local-caching) (e.g. if dist folder was removed to generate new output)
 `WIREIT_CACHE=none npm run build --workspace=test-app1`
 
+
+#### What could be enhanced
+- Dependencies must be declared for each script something like 
+"dependencies":["workspace"] would be nice https://github.com/google/wireit/issues/23
+
+- Angular build removes scripts from npm packages but not "wireit" config - for this another script has to be used
+
+**Cache:**
+
+If you're using files to cache scripts, make sure you're not missing anything that should trigger a retry
+
+e.g. use alle files of the package -> this could be slow...
+```json
+"files": [
+  "src/**",
+  "*.json",
+  ...
+],
+```
+
+
+how the graph is build https://github1s.com/google/wireit/blob/main/src/analyzer.ts#L206
 ---
 
 
