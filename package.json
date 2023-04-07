@@ -11,11 +11,11 @@
     "test": "nx run-many --target=test"
   },
   "workspaces": [
-    "projects\\apps\\test-app1",
-    "projects\\apps\\test-app2",
-    "projects\\libs\\lib1",
-    "projects\\libs\\lib2",
-    "projects\\libs\\lib3"
+    "projects/apps/test-app1",
+    "projects/apps/test-app2",
+    "projects/libs/lib1",
+    "projects/libs/lib2",
+    "projects/libs/lib3"
   ],
   "private": true,
   "dependencies": {
