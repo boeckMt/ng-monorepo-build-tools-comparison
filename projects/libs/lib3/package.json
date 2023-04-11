@@ -1,14 +1,14 @@
 {
   "name": "@libs/lib3",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "main": "src/public-api",
   "peerDependencies": {
     "@angular/common": "^15.2.0",
     "@angular/core": "^15.2.0"
   },
   "dependencies": {
-    "tslib": "^2.3.0",
-    "@libs/lib1": "0.0.1"
+    "@libs/lib1": "0.0.1",
+    "tslib": "^2.3.0"
   },
   "sideEffects": false
 }

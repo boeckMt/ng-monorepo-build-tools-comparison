@@ -82,9 +82,10 @@ use projects/libs/**/tsconfig.lib.prod.json to override the path's
 ### Sync version and dependency versions across workspaces
 To share the same version for all library packages npm's [pkg](https://docs.npmjs.com/cli/v9/commands/npm-pkg) or [version](https://docs.npmjs.com/cli/v9/commands/npm-version) command can be used.
 
-To run them for all workspaces and the root package use the `--workspaces --include-workspace-root`
-E.g. set a new version in your workspace `npm version <newversion> -m "<message>" --workspaces --include-workspace-root`
-If you accidentally already set the version in the root package but not in workspace packages use `npm pkg version=<newversion> --workspaces`
+To run them for all workspaces and the root package use the `--workspaces --include-workspace-root`.
+E.g. set a new version in your workspace `npm version <newversion> -m "<message>" --workspaces --include-workspace-root`.
+If you accidentally already set the version in the root package but not in workspace packages use `npm pkg set version=<newversion> --workspaces`.
+You can also use a path to a workspace directory `npm pkg set version=<newversion> --workspace projects/libs`.
 
 
 To sync dependency versions the package [syncpack](https://github.com/JamieMason/syncpack) could be helpful.
