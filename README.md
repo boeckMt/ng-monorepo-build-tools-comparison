@@ -10,6 +10,9 @@ and adjustments to build and test apps and libraries
 - [test-wireit](https://github.com/boeckMt/ng-monorepo-build-tools-comparison/tree/test-wireit)
 - [test-nx](https://github.com/boeckMt/ng-monorepo-build-tools-comparison/tree/test-nx)
 
+and also a branch to test sync version and dependency versions across workspaces
+- [sync-deps](https://github.com/boeckMt/ng-monorepo-build-tools-comparison/tree/sync-deps)
+
 ### Commands to create this repo
 
 - `ng new ng-workspace-test --create-application=false`
