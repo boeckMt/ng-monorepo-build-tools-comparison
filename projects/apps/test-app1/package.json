@@ -7,6 +7,6 @@
     "license": "ISC",
     "devDependencies": {},
     "dependencies": {
-        "@libs/lib2": "*"
+        "@libs/lib2": "0.0.1"
     }
 }

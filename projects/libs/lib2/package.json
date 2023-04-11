@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "tslib": "^2.3.0",
-    "@libs/lib1": "*"
+    "@libs/lib1": "0.0.1"
   },
   "sideEffects": false
 }
