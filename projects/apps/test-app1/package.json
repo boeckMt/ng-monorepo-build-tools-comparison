@@ -6,6 +6,6 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
-        "@libs/lib2": "0.0.1"
+        "@libs/lib2": "1.0.0"
     }
 }
